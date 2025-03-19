@@ -10,26 +10,26 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3002") // Allowings React frontend
+            policy.WithOrigins("http://localhost:3000") // Allowing React frontend
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
 });
 
-// Load MongoDB settings from `appsettings.json`
+// Loading MongoDB settings from `appsettings.json`
 builder.Services.Configure<MongoDBSettings>(
     builder.Configuration.GetSection("MongoDB"));
 
-// Register UserService
+// Registering UserService
 builder.Services.AddSingleton<UserService>();
 
-// Enable Controllers
+// Enabling Controllers
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
-// Apply CORS Policy
+// Applying CORS Policy
 app.UseCors("AllowReactApp");
 
 app.UseRouting();
