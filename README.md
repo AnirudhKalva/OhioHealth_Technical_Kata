@@ -7,7 +7,6 @@ This is a **full-stack web application** that allows users to **save and retriev
 ✔ Retrieve the last saved user from MongoDB  
 ✔ Secure API using an **API Key**  
 ✔ Fully responsive UI with **Tailwind CSS**  
-✔ Light Yellow & White UI Theme for a Soft Look  
 
 ---
 
@@ -34,6 +33,7 @@ cd your-repo
    cd Backend_Webservice
    dotnet restore
    ```
+```sh
     Create Configuration File
     Create a new appsettings.json file inside the Backend_Webservice/ folder and add:
     {
@@ -44,21 +44,21 @@ cd your-repo
   },
   "API_KEY": "your-secure-api-key"
 }
+```
 ```sh
    dotnet run
-   ```
-
- ### ** 3 Frontend Setup:**
+```
+### **3 Frontend Setup:**
    ```sh
    cd ../form-app
    npm install
    ```
-
+```sh
    Create a new .env file inside form-app/ and add:
 
    REACT_APP_API_URL=http://localhost:5166/api
    REACT_APP_API_KEY=your-secure-api-key
-
-    ```sh   
+```
+```sh   
    npm start
-   ```
+```
