@@ -22,23 +22,43 @@ This is a **full-stack web application** that allows users to **save and retriev
 # **3️⃣ Steps to Set Up and Run the Project**
 Follow these steps to **install, configure, and run** the project.
 
-### **1️⃣ Clone the Repository**
+### **1️ Clone the Repository**
 ```sh
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
 ```
 
-### 2 **Backend Setup:**
+### **2 Backend Setup:**
 
    ```sh
    cd Backend_Webservice
    dotnet restore
    ```
-    **Create Configuration File**
+    Create Configuration File
     Create a new appsettings.json file inside the Backend_Webservice/ folder and add:
+    {
+  "MongoDB": {
+    "ConnectionString": "mongodb://localhost:27017",
+    "DatabaseName": "UserDatabase",
+    "CollectionName": "Users"
+  },
+  "API_KEY": "your-secure-api-key"
+}
+```sh
+   dotnet run
+   ```
 
- ### 3 **Frontend Setup:**
+ ### ** 3 Frontend Setup:**
    ```sh
    cd ../form-app
    npm install
+   ```
+
+   Create a new .env file inside form-app/ and add:
+
+   REACT_APP_API_URL=http://localhost:5166/api
+   REACT_APP_API_KEY=your-secure-api-key
+
+    ```sh   
+   npm start
    ```
