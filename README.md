@@ -23,8 +23,8 @@ Follow these steps to **install, configure, and run** the project.
 
 ### **1️ Clone the Repository**
 ```sh
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/AnirudhKalva/OhioHealth_Technical_Kata.git
+cd OhioHealth_Technical_Kata
 ```
 
 ### **2 Backend Setup:**
